@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Domain", "Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence", "ClinicSolution.Persistence\ClinicSolution.Persistence.csproj", "{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence.Test", "ClinicSolution.Persistence.Test\ClinicSolution.Persistence.Test.csproj", "{4CABC023-B3DB-4F49-9AB6-257276D983C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{1872A665-0AA5-4647-AC0F-C8A7FADE94D8} = {6339498E-C6EC-4858-85E0-F913D094FD8F}
 		{A14D7B87-7602-4383-93FF-D247722096F9} = {6339498E-C6EC-4858-85E0-F913D094FD8F}
 		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B} = {7ACECF50-3D33-43F1-B5C4-203DA4500F34}
+		{4CABC023-B3DB-4F49-9AB6-257276D983C4} = {32DF97ED-B85B-44E3-A418-2908D8762927}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D1F4428-268B-49FD-85EF-96B31128FD3C}

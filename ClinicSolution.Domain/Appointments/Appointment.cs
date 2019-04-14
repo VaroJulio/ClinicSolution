@@ -6,7 +6,7 @@ namespace ClinicSolution.Domain.Appointments
 {
     public class Appointment: Audit, IAppointment
     {
-        public Guid AppointMentType { get; set; }
+        public Guid AppointMentTypeId { get; set; }
         public DateTime AppointMentDate { get; set; }
         public Guid PatientId { get; set; }
     }
