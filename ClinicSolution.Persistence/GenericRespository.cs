@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSolution.Persistence
+namespace ClinicSolution.Infraestructure
 {
     public class GenericRespository<T> : IGenericRepository<T> where T : class
     {

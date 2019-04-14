@@ -3,7 +3,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ClinicSolution.Persistence
+namespace ClinicSolution.Infraestructure
 {
     public interface IGenericRepository<T> where T: class
     {

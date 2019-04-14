@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Domain", "Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence", "ClinicSolution.Persistence\ClinicSolution.Persistence.csproj", "{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence.Test", "ClinicSolution.Persistence.Test\ClinicSolution.Persistence.Test.csproj", "{4CABC023-B3DB-4F49-9AB6-257276D983C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Infraestructure.Tests", "ClinicSolution.Persistence.Test\ClinicSolution.Infraestructure.Tests.csproj", "{4CABC023-B3DB-4F49-9AB6-257276D983C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
