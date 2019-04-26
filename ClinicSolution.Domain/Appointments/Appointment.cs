@@ -8,6 +8,7 @@ namespace ClinicSolution.Domain.Appointments
     {
         public Guid AppointMentTypeId { get; set; }
         public DateTime AppointMentDate { get; set; }
-        public Guid PatientId { get; set; }
+        public string PatientDocument { get; set; }
+        public Guid PatientDocumentTypeId { get; set; }
     }
 }

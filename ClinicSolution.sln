@@ -17,13 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6339498E-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{7ACECF50-3D33-43F1-B5C4-203DA4500F34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Common", "ClinicSolution.Common\ClinicSolution.Common.csproj", "{5686F12E-4FC8-4F22-912B-F0B9EF76952B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSolution.Common", "ClinicSolution.Common\ClinicSolution.Common.csproj", "{5686F12E-4FC8-4F22-912B-F0B9EF76952B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Application", "ClinicSolution.Application\ClinicSolution.Application.csproj", "{1872A665-0AA5-4647-AC0F-C8A7FADE94D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSolution.Application", "ClinicSolution.Application\ClinicSolution.Application.csproj", "{1872A665-0AA5-4647-AC0F-C8A7FADE94D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Domain", "ClinicSolution.Domain\ClinicSolution.Domain.csproj", "{A14D7B87-7602-4383-93FF-D247722096F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicSolution.Domain", "ClinicSolution.Domain\ClinicSolution.Domain.csproj", "{A14D7B87-7602-4383-93FF-D247722096F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence", "ClinicSolution.Persistence\ClinicSolution.Persistence.csproj", "{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Persistence", "ClinicSolution.Persistence\ClinicSolution.Persistence.csproj", "{35978F3A-D2E2-4E8E-821E-43126156D115}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicSolution.Infraestructure.Tests", "ClinicSolution.Persistence.Test\ClinicSolution.Infraestructure.Tests.csproj", "{4CABC023-B3DB-4F49-9AB6-257276D983C4}"
 EndProject
@@ -53,10 +53,10 @@ Global
 		{A14D7B87-7602-4383-93FF-D247722096F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A14D7B87-7602-4383-93FF-D247722096F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A14D7B87-7602-4383-93FF-D247722096F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35978F3A-D2E2-4E8E-821E-43126156D115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35978F3A-D2E2-4E8E-821E-43126156D115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35978F3A-D2E2-4E8E-821E-43126156D115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35978F3A-D2E2-4E8E-821E-43126156D115}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CABC023-B3DB-4F49-9AB6-257276D983C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,7 +71,7 @@ Global
 		{5686F12E-4FC8-4F22-912B-F0B9EF76952B} = {B8736BBD-827C-4C67-9C2D-049750A31165}
 		{1872A665-0AA5-4647-AC0F-C8A7FADE94D8} = {6339498E-C6EC-4858-85E0-F913D094FD8F}
 		{A14D7B87-7602-4383-93FF-D247722096F9} = {6339498E-C6EC-4858-85E0-F913D094FD8F}
-		{CF97D516-FE2B-463C-B1AD-71FDF1EE8F2B} = {7ACECF50-3D33-43F1-B5C4-203DA4500F34}
+		{35978F3A-D2E2-4E8E-821E-43126156D115} = {7ACECF50-3D33-43F1-B5C4-203DA4500F34}
 		{4CABC023-B3DB-4F49-9AB6-257276D983C4} = {32DF97ED-B85B-44E3-A418-2908D8762927}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

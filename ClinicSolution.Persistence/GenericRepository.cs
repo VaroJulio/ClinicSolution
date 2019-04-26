@@ -6,14 +6,14 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicSolution.Infraestructure
+namespace ClinicSolution.Persistence
 {
-    public class GenericRespository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected DbContext _Context;
         protected DbSet<T> _DbSet;
 
-        public GenericRespository(DbContext context)
+        public GenericRepository(DbContext context)
         {
             _Context = context ?? throw new ArgumentNullException(nameof(context));
             _DbSet = _Context.Set<T>();
@@ -25,7 +25,8 @@ namespace ClinicSolution.Infraestructure
             if (result != null)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
@@ -61,7 +62,7 @@ namespace ClinicSolution.Infraestructure
 
         public Task<int> SaveAsync()
         {
-           return _Context.SaveChangesAsync();
+            return _Context.SaveChangesAsync();
         }
     }
 }

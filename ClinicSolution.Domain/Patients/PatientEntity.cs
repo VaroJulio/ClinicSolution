@@ -11,12 +11,13 @@ namespace ClinicSolution.Domain.Patients
     [Table("Patients")]
     public class PatientEntity: IPatient
     {
-        [Key]
         public Guid Id { get; set; }
 
+        [Key, Column(Order = 0)]
         [Required, MaxLength(50)]
         public string Document { get; set; }
 
+        [Key, Column(Order = 1)]
         [ForeignKey("DocumentType")]
         public Guid DocumentTypeId { get; set; }
 

@@ -20,8 +20,11 @@ namespace ClinicSolution.Domain.Appointments
         [Required]
         public DateTime AppointMentDate { get; set; }
 
-        [ForeignKey("Patient")]
-        public Guid PatientId { get; set; }
+        [ForeignKey("Patient"), Column(Order = 0)]
+        public string PatientDocument { get; set; }
+
+        [ForeignKey("Patient"), Column(Order = 1)]
+        public Guid PatientDocumentTypeId { get; set; }
 
         [Required]
         public DateTime DateCreated { get; set; }

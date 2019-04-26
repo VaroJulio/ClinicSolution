@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
+using AutoMapper;
+using ClinicSolution.Persistence;
+using ClinicSolution.WebApi.App_Start;
+using Unity;
 
 namespace ClinicSolution.WebApi
 {
@@ -9,9 +14,14 @@ namespace ClinicSolution.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            // Configuración y servicios de API web
+            var mapperConfig = MappingProfile.InitializeAutoMapper();
+            IMapper mapper = mapperConfig.CreateMapper();
+  
+            var container = new UnityContainer();
+            container.RegisterInstance(mapper);
+            //container.RegisterType<>();
+            config.DependencyResolver = new UnityResolver(container);
 
-            // Rutas de API web
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
