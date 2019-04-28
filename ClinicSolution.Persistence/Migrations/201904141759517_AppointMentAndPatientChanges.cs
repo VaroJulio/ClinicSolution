@@ -12,75 +12,74 @@ namespace ClinicSolution.Persistence.Migrations
             CreateTable(
                 "dbo.Appointments",
                 c => new
-                    {
-                        PatientDocument = c.String(nullable: false, maxLength: 50),
-                        PatientDocumentTypeId = c.Guid(nullable: false),
-                        Id = c.Guid(nullable: false),
-                        AppointMentTypeId = c.Guid(nullable: false),
-                        AppointMentDate = c.DateTime(nullable: false),
-                        DateCreated = c.DateTime(nullable: false),
-                        DateModified = c.DateTime(),
-                        Active = c.Boolean(nullable: false),
-                    })
+                {
+                    PatientDocument = c.String(nullable: false, maxLength: 50),
+                    PatientDocumentTypeId = c.Guid(nullable: false),
+                    Id = c.Guid(nullable: false),
+                    AppointMentTypeId = c.Guid(nullable: false),
+                    AppointMentDate = c.DateTime(nullable: false),
+                    DateCreated = c.DateTime(nullable: false),
+                    DateModified = c.DateTime(),
+                    Active = c.Boolean(nullable: false),
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AppointmentTypes", t => t.AppointMentTypeId, cascadeDelete: true)
                 .ForeignKey("dbo.Patients", t => new { t.PatientDocument, t.PatientDocumentTypeId }, cascadeDelete: true)
                 .Index(t => new { t.PatientDocument, t.PatientDocumentTypeId })
                 .Index(t => t.AppointMentTypeId);
-            
+
             CreateTable(
                 "dbo.AppointmentTypes",
                 c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        AppointMentName = c.String(nullable: false, maxLength: 50),
-                        DateCreated = c.DateTime(nullable: false),
-                        DateModified = c.DateTime(),
-                        Active = c.Boolean(nullable: false),
-                    })
+                {
+                    Id = c.Guid(nullable: false),
+                    AppointMentName = c.String(nullable: false, maxLength: 50),
+                    DateCreated = c.DateTime(nullable: false),
+                    DateModified = c.DateTime(),
+                    Active = c.Boolean(nullable: false),
+                })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Patients",
                 c => new
-                    {
-                        Document = c.String(nullable: false, maxLength: 50),
-                        DocumentTypeId = c.Guid(nullable: false),
-                        Id = c.Guid(nullable: false,
+                {
+                    Document = c.String(nullable: false, maxLength: 50),
+                    DocumentTypeId = c.Guid(nullable: false),
+                    Id = c.Guid(nullable: false,
                             annotations: new Dictionary<string, AnnotationValues>
                             {
-                                { 
+                                {
                                     "IndexPatientId",
                                     new AnnotationValues(oldValue: null, newValue: "IndexAnnotation: { IsUnique: True }")
                                 },
                             }),
-                        FirstName = c.String(nullable: false, maxLength: 50),
-                        LastName = c.String(nullable: false, maxLength: 50),
-                        PhoneNumber = c.String(nullable: false, maxLength: 50),
-                        Email = c.String(nullable: false, maxLength: 50),
-                        BirthDay = c.DateTime(nullable: false),
-                        DateCreated = c.DateTime(nullable: false),
-                        DateModified = c.DateTime(),
-                        Active = c.Boolean(nullable: false),
-                    })
+                    FirstName = c.String(nullable: false, maxLength: 50),
+                    LastName = c.String(nullable: false, maxLength: 50),
+                    PhoneNumber = c.String(nullable: false, maxLength: 50),
+                    Email = c.String(nullable: false, maxLength: 50),
+                    BirthDay = c.DateTime(nullable: false),
+                    DateCreated = c.DateTime(nullable: false),
+                    DateModified = c.DateTime(),
+                    Active = c.Boolean(nullable: false),
+                })
                 .PrimaryKey(t => new { t.Document, t.DocumentTypeId })
                 .ForeignKey("dbo.DocumentTypes", t => t.DocumentTypeId, cascadeDelete: true)
                 .Index(t => t.DocumentTypeId);
-            
+
             CreateTable(
                 "dbo.DocumentTypes",
                 c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        DocumentName = c.String(nullable: false, maxLength: 50),
-                        DateCreated = c.DateTime(nullable: false),
-                        DateModified = c.DateTime(),
-                        Active = c.Boolean(nullable: false),
-                    })
+                {
+                    Id = c.Guid(nullable: false),
+                    DocumentName = c.String(nullable: false, maxLength: 50),
+                    DateCreated = c.DateTime(nullable: false),
+                    DateModified = c.DateTime(),
+                    Active = c.Boolean(nullable: false),
+                })
                 .PrimaryKey(t => t.Id);
-            
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Appointments", new[] { "PatientDocument", "PatientDocumentTypeId" }, "dbo.Patients");

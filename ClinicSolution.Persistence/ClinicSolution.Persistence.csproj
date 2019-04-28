@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201904141759517_AppointMentAndPatientChanges.Designer.cs">
       <DependentUpon>201904141759517_AppointMentAndPatientChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904282136391_Cambios.cs" />
+    <Compile Include="Migrations\201904282136391_Cambios.Designer.cs">
+      <DependentUpon>201904282136391_Cambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profiles\AppointmentProfile.cs" />
     <Compile Include="Profiles\AppointmentTypeProfile.cs" />
@@ -85,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904141759517_AppointMentAndPatientChanges.resx">
       <DependentUpon>201904141759517_AppointMentAndPatientChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904282136391_Cambios.resx">
+      <DependentUpon>201904282136391_Cambios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

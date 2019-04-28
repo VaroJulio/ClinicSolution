@@ -18,8 +18,15 @@ namespace ClinicSolution.Persistence
 {
     public class ContextDb : DbContext
     {
+
+        public ContextDb() : base("ClinicSolutionDb") {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ContextDb>());
+        }
+
         public ContextDb(IMapper mapper) : base("ClinicSolutionDb") {
-            Database.SetInitializer(new ClinicSolutionDbInitializer(mapper));
+            Database.SetInitializer<ContextDb>(null);
+            //Database.SetInitializer<ContextDb>(new ClinicSolutionDbInitializer(mapper));
+            //Database.SetInitializer<ContextDb>(new DropCreateDatabaseIfModelChanges<ContextDb>());
         }
 
         public virtual DbSet<AppointmentEntity> Appointments { get; set; }
